@@ -65,6 +65,7 @@ class _MyAppState extends State<MyApp> {
           setState(() {
             _initialURI = initialURI;
           });
+          Get.toNamed(_initialURI?.path ?? AppPage.notFoundPage);
         } else {
           log('Initial URI is NULL');
         }
@@ -94,6 +95,8 @@ class _MyAppState extends State<MyApp> {
             _currentURI = uri;
             _err = null;
           });
+          log(_currentURI?.path ?? '');
+          Get.toNamed(_currentURI?.path ?? AppPage.notFoundPage);
         }, onError: (Object err) {
           if (!mounted) {
             return;

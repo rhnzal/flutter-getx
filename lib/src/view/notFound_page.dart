@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx/src/common/pages.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +15,7 @@ class GetNotFoundPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         // backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Get Third Page'),
+        title: const Text('Page Not Found'),
       ),
       body: Center(
         child: Column(
@@ -27,7 +28,9 @@ class GetNotFoundPage extends StatelessWidget {
             ),
             const Gap(20),
             ElevatedButton(
-              onPressed: Get.back, 
+              onPressed: () {
+                Get.offAllNamed(AppPage.homePage);
+              }, 
               child: Text('Go back')
             ),
           ],

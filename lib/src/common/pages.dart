@@ -1,5 +1,5 @@
 class AppPage {
-  static String homePage = '/';
+  static String homePage = '/home';
   static String secondPage = '/second-page';
   static String thirdPage = '/third-page';
   
